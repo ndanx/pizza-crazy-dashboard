@@ -1,0 +1,20 @@
+{
+  "name": "pizza-crazy-dashboard",
+  "version": "1.0.0",
+  "description": "Professional analytics dashboard for Pizza Crazy pizzeria",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "start": "open index.html",
+    "build": "echo 'No build step needed - vanilla JS'",
+    "test": "echo 'Add tests here'",
+    "lint": "eslint js/ --fix"
+  },
+  "keywords": ["dashboard", "analytics", "pizza", "pizzeria", "real-time", "charts", "dark-theme"],
+  "author": "Pizza Crazy Team",
+  "license": "MIT",
+  "devDependencies": {"eslint": "^8.48.0"},
+  "repository": {"type": "git", "url": "https://github.com/ndanx/pizza-crazy-dashboard.git"},
+  "bugs": {"url": "https://github.com/ndanx/pizza-crazy-dashboard/issues"},
+  "homepage": "https://github.com/ndanx/pizza-crazy-dashboard#readme"
+}

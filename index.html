@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Crazy — Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Partículas flotantes -->
+    <div class="floating-pizza pizza-1">🍕</div>
+    <div class="floating-pizza pizza-2">🍕</div>
+    <div class="floating-pizza pizza-3">🍕</div>
+    <div class="floating-pizza pizza-4">🍕</div>
+    <div class="floating-pizza pizza-5">🍕</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="pacman-logo">
+                <div class="pacman"></div>
+            </div>
+            <div class="title">
+                <h1>Pizza Crazy — Dashboard</h1>
+                <p>Analytics en tiempo real</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="status-pill">
+                <div class="status-dot" id="statusDot"></div>
+                <div>
+                    <div id="openStatus">Abierto</div>
+                    <div class="countdown" id="countdown"></div>
+                </div>
+            </div>
+            <button class="btn-refresh" id="refreshBtn">
+                <span>Actualizar</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36M20.49 15a9 9 0 0 1-14.85 3.36"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-icon">🍕</div>
+                <div class="kpi-number" data-value="0">0</div>
+                <div class="kpi-label">Pedidos hoy</div>
+                <div class="kpi-comparison up">↑ <span id="ordersComp">+0%</span> vs ayer</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon">💰</div>
+                <div class="kpi-number" data-value="0">$0</div>
+                <div class="kpi-label">Ingresos del día</div>
+                <div class="kpi-comparison up">↑ <span id="revenueComp">+0%</span> vs ayer</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon">⭐</div>
+                <div class="kpi-label" id="topProduct">-</div>
+                <div class="kpi-label">Producto más pedido</div>
+                <div class="kpi-comparison" id="topProductQty">- unidades</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon">🕐</div>
+                <div class="kpi-label" id="peakHour">-</div>
+                <div class="kpi-label">Hora pico</div>
+                <div class="kpi-comparison" id="peakHourOrders">- pedidos</div>
+            </div>
+        </div>
+
+        <!-- Top 10 Productos -->
+        <h2 class="section-title">Top 10 Productos</h2>
+        <div class="top-products" id="topProductsContainer">
+            <div class="product-bar">
+                <div class="product-name skeleton" style="height: 20px; width: 100px;"></div>
+                <div class="product-bar-track" style="opacity: 0.3;"></div>
+                <div class="product-value skeleton" style="height: 20px;"></div>
+            </div>
+        </div>
+
+        <!-- Heatmap -->
+        <h2 class="section-title">Demanda por hora</h2>
+        <div class="heatmap-section" id="heatmapSection"></div>
+
+        <!-- Timeline -->
+        <h2 class="section-title">Pedidos de hoy</h2>
+        <div class="timeline-section" id="timelineSection"></div>
+
+        <!-- Feed en vivo -->
+        <h2 class="section-title">En vivo</h2>
+        <div class="live-feed-section" id="liveFeedSection"></div>
+
+        <!-- Resumen por estado -->
+        <h2 class="section-title">Resumen por estado</h2>
+        <div class="status-summary-section" id="statusSummarySection"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
